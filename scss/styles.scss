@@ -1,0 +1,36 @@
+//Global
+@import './global/fonts';
+@import './global/var';
+@import './global/reset';
+@import './global/global';
+
+//Moduls
+@import './moduls/burger';
+@import './moduls/btn';
+@import './moduls/title';
+@import './moduls/roadmap';
+@import './moduls/roadmap-2';
+
+//Blocks
+@import './blocks/block-1';
+@import './blocks/block-2';
+
+//Sections
+@import './sections/header';
+@import './sections/cover';
+@import './sections/info';
+@import './sections/info-2';
+@import './sections/reasons';
+@import './sections/desc';
+@import './sections/why';
+@import './sections/data';
+@import './sections/description';
+@import './sections/conditions';
+@import './sections/advantages';
+@import './sections/slider';
+@import './sections/guarantee';
+@import './sections/vacancies';
+@import './sections/questions';
+@import './sections/partner';
+@import './sections/path';
+

@@ -1,0 +1,27 @@
+.block-2 {
+  &__title {
+    font-family: var(--font-text-2);
+    font-size: 48px;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 120%;
+    color: rgba(239, 239, 239, 0.7);
+  }
+}
+
+@media (max-width: 768px) {
+  .block-2 {
+    &__title {
+      font-size: 30px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+}

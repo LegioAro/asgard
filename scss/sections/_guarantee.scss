@@ -1,0 +1,263 @@
+.guarantee {
+  margin-bottom: 120px;
+  position: relative;
+
+  &__dec {
+    position: absolute;
+
+    &-1 {
+      width: 638px;
+      left: 0;
+      bottom: -50px;
+    }
+
+    &-2 {
+      width: 515px;
+      top: -102px;
+      right: 0;
+    }
+
+    &-3 {
+      width: 185px;
+      top: -45px;
+      left: 0;
+      display: none;
+    }
+
+    &-4 {
+      width: 100px;
+      top: 395px;
+      right: 0;
+      display: none;
+      z-index: 2;
+    }
+
+    &-5 {
+      width: 100%;
+      top: 45px;
+      left: 0;
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    max-width: 1344px;
+    margin: 0 auto;
+    padding: 70px 74px;
+    position: relative;
+    z-index: 1;
+
+    background-image: linear-gradient(
+      180deg,
+      rgba(32, 28, 32, 0) -54.92%,
+      rgba(32, 28, 32, 0.75) 100%
+    );
+    box-shadow: 0px 21px 43px #121010;
+    backdrop-filter: blur(25px);
+    border-radius: 5px;
+  }
+
+  &__title {
+    margin-bottom: 70px;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__items {
+    width: 100%;
+    max-width: 382px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    background-color: rgba(64, 58, 58, 0.3);
+    backdrop-filter: blur(25px);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 30px 56px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-icon {
+    width: 100%;
+    max-width: 37px;
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  &__slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__slider-item {
+  }
+
+  &__slider-item-title {
+    margin-bottom: 20px;
+  }
+
+  &__slider-item-img {
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__slider-item-btn {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 100%;
+    max-width: 75px;
+    height: 75px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(
+      274.39deg,
+      rgba(190, 141, 52, 1) -14.04%,
+      rgba(254, 227, 178, 1) 215.29%
+    );
+    opacity: 0.5;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    img {
+      display: flex;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .guarantee {
+    &__wrapper {
+      padding: 70px 20px;
+    }
+    &__item {
+      padding: 20px 56px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .guarantee {
+    &__dec {
+      &-1 {
+        width: 463px;
+      }
+
+      &-2 {
+        width: 315px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .guarantee {
+    &__content {
+      flex-direction: column;
+    }
+    &__items {
+      flex-direction: row;
+      max-width: 100%;
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+    &__item {
+      max-width: 33%;
+      width: 100%;
+      margin-bottom: 0;
+      margin-right: 20px;
+      padding: 30px 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__slider {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .guarantee {
+    margin-bottom: 60px;
+
+    &__dec {
+      &-1 {
+        display: none;
+      }
+
+      &-2 {
+        display: none;
+      }
+
+      &-3,
+      &-4,
+      &-5 {
+        display: flex;
+      }
+    }
+    &__wrapper {
+      padding: 0 26px;
+      backdrop-filter: none;
+      background-color: rgba(0, 0, 0, 0);
+      background-image: none;
+      box-shadow: none;
+    }
+
+    &__title {
+      text-align: right;
+      margin: 0 0 30px auto;
+      max-width: 180px;
+    }
+
+    &__items {
+      flex-direction: column;
+      margin-bottom: 20px;
+      max-width: none;
+      width: auto;
+      margin-right: -46px;
+    }
+    &__item {
+      max-width: 100%;
+      margin-right: -20px;
+      margin-bottom: 20px;
+      padding: 44px 100px 44px 31px;
+      backdrop-filter: blur(25px);
+      border-radius: 5px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .guarantee {
+    &__slider {
+      width: auto;
+      margin: 0 -46px;
+      padding-left: 46px;
+    }
+  }
+}
