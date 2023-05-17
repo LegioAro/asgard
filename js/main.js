@@ -18,12 +18,64 @@ window.addEventListener('resize', () => {
   initSliderModuls();
 });
 
+//header
+
+function headerScroll() {
+  const header = document.querySelector('.header');
+  if (window.pageYOffset > 0 && !header.classList.contains('header--scroll')) {
+    header.classList.add('header--scroll');
+  } else if (window.pageYOffset <= 0 && header.classList.contains('header--scroll')) {
+    header.classList.remove('header--scroll');
+  }
+}
+headerScroll();
+
+window.addEventListener('scroll', function () {
+  headerScroll();
+});
+
+//burger
+
+function isBurger() {
+  const burger = document.querySelector('.burger');
+  const burgerBtn = document.querySelector('.burger__btn');
+  const header = document.querySelector('.header');
+
+  burgerBtn.addEventListener('click', () => {
+    if (!burger.classList.contains('burger--active')) {
+      burger.classList.add('burger--active');
+      if (window.pageYOffset === 0) {
+        header.classList.add('header--scroll');
+      }
+    } else if (burger.classList.contains('burger--active')) {
+      burger.classList.remove('burger--active');
+      if (window.pageYOffset === 0) {
+        header.classList.remove('header--scroll');
+      }
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    const withinBurger = e.composedPath().includes(burger);
+    const withinBurgerBtn = e.composedPath().includes(burgerBtn);
+
+    if (!withinBurger && !withinBurgerBtn) {
+      burger.classList.remove('burger--active');
+      if (window.pageYOffset === 0) {
+        header.classList.remove('header--scroll');
+      }
+    }
+  });
+}
+isBurger();
+
 //sliders
 
 const swiper = new Swiper('.info-2__slider', {
   slidesPerView: 4,
   spaceBetween: 20,
   loop: true,
+  allowTouchMove: true,
 
   breakpoints: {
     320: {
@@ -41,6 +93,7 @@ const swiper = new Swiper('.info-2__slider', {
     768: {
       slidesPerView: 4,
       spaceBetween: 20,
+      allowTouchMove: false,
     },
   },
 });

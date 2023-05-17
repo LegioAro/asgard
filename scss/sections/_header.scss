@@ -1,14 +1,37 @@
 .header {
   padding: 20px 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
   left: 0;
   top: 0;
+  z-index: 100;
+  transition: 0.3s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    z-index: 9;
+  }
+
+  &--scroll {
+    &::before {
+      background-color: rgba(64, 58, 58, 0.3);
+      backdrop-filter: blur(25px);
+      border-radius: 5px;
+    }
+  }
 
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 10;
   }
 
   &__logo {
@@ -40,6 +63,11 @@
     cursor: pointer;
     margin-right: 55px;
     background-color: transparent;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #be8d34;
+    }
   }
 
   &__langs {
