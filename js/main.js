@@ -39,6 +39,7 @@ window.addEventListener('scroll', function () {
 function isBurger() {
   const burger = document.querySelector('.burger');
   const burgerBtn = document.querySelector('.burger__btn');
+  const burgerBtnClose = document.querySelector('.burger__btn-close');
   const header = document.querySelector('.header');
 
   burgerBtn.addEventListener('click', () => {
@@ -52,6 +53,13 @@ function isBurger() {
       if (window.pageYOffset === 0) {
         header.classList.remove('header--scroll');
       }
+    }
+  });
+
+  burgerBtnClose.addEventListener('click', () => {
+    burger.classList.remove('burger--active');
+    if (window.pageYOffset === 0) {
+      header.classList.remove('header--scroll');
     }
   });
 

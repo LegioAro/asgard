@@ -80,6 +80,18 @@
       color: #be8d34;
     }
   }
+
+  &__btn-close {
+    position: absolute;
+    width: 100%;
+    max-width: 30px;
+    right: 12px;
+    top: 94px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -97,6 +109,10 @@
     &__link {
       font-size: 18px;
       margin-bottom: 22px;
+    }
+
+    &__btn-close {
+      display: flex;
     }
   }
 }
