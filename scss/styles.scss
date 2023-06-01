@@ -10,6 +10,7 @@
 @import './moduls/title';
 @import './moduls/roadmap';
 @import './moduls/roadmap-2';
+@import './moduls/modal';
 
 //Blocks
 @import './blocks/block-1';
@@ -33,4 +34,104 @@
 @import './sections/questions';
 @import './sections/partner';
 @import './sections/path';
+@import './sections/footer';
 
+.gallery {
+  overflow: hidden;
+  &__wrapper {
+    max-width: 1344px;
+    height: 755px;
+    position: relative;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__wrapper-arrows {
+  }
+
+  &__wrapper-arrow {
+    position: absolute;
+    width: 100%;
+    max-width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(274.39deg, #be8d34 -14.04%, #fee3b2 215.29%);
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+
+    img {
+      display: flex;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__wrapper-arrow-l {
+    right: calc(100% + 22px);
+  }
+
+  &__wrapper-arrow-r {
+    left: calc(100% + 22px);
+  }
+}
+
+@media (max-width: 1700px) {
+  .gallery {
+    &__wrapper-arrow {
+      max-width: 90px;
+      height: 90px;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .gallery {
+    &__wrapper {
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .gallery {
+    &__wrapper-arrow {
+      max-width: 50px;
+      height: 50px;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    &__wrapper-arrow {
+      top: calc(100% + 20px);
+      transform: translateY(0);
+    }
+    &__wrapper-arrow-l {
+      right: auto;
+      left: 20px;
+    }
+
+    &__wrapper-arrow-r {
+      left: auto;
+      right: 20px;
+    }
+  }
+}
