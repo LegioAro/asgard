@@ -54,6 +54,7 @@
   &__video {
     width: 100%;
     max-width: 890px;
+    height: 490px;
   }
 }
 
@@ -87,6 +88,7 @@
     }
     &__video {
       max-width: 700px;
+      height: 400px;
       margin: 0 auto 50px;
     }
 
@@ -125,6 +127,14 @@
   }
 }
 
+@media (max-width: 700px) {
+  .info-3 {
+    &__video {
+      height: 300px;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .info-3 {
     &__title {
@@ -132,6 +142,13 @@
     }
     &__video {
       margin-bottom: 30px;
+    }
+  }
+}
+@media (max-width: 560px) {
+  .info-3 {
+    &__video {
+      height: 250px;
     }
   }
 }
@@ -154,6 +171,22 @@
   .info-3 {
     &__item-num {
       margin-right: 20px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .info-3 {
+    &__video {
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .info-3 {
+    &__video {
+      height: 150px;
     }
   }
 }
