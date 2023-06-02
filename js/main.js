@@ -1,4 +1,4 @@
-isResize('.info__img', '.info__wrapper', '.info__content-img', 1160);
+isResize('.info-3__video', '.info-3__wrapper', '.info-3__content-video', 1160);
 isResize(
   '.info--revers .info__img',
   '.info--revers .info__wrapper',
@@ -7,7 +7,8 @@ isResize(
 );
 
 window.addEventListener('resize', () => {
-  isResize('.info__img', '.info__wrapper', '.info__content-img', 1160);
+  isResize('.info-3__video', '.info-3__wrapper', '.info-3__content-video', 1160);
+
   isResize(
     '.info--revers .info__img',
     '.info--revers .info__wrapper',
@@ -41,6 +42,7 @@ function isBurger() {
   const burgerBtn = document.querySelector('.burger__btn');
   const burgerBtnClose = document.querySelector('.burger__btn-close');
   const header = document.querySelector('.header');
+  const burgerLinks = burger.querySelectorAll('.burger__link');
 
   burgerBtn.addEventListener('click', () => {
     if (!burger.classList.contains('burger--active')) {
@@ -54,6 +56,12 @@ function isBurger() {
         header.classList.remove('header--scroll');
       }
     }
+  });
+
+  burgerLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('burger--active');
+    });
   });
 
   burgerBtnClose.addEventListener('click', () => {
