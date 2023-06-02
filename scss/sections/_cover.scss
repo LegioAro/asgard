@@ -7,6 +7,17 @@
   background-position: top center;
   background-size: cover;
 
+  &--tmpl-2 {
+    padding: 200px 0;
+    margin-bottom: 0;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 120px;
+    margin-bottom: 30px;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -187,7 +198,12 @@
   .cover {
     margin-bottom: 60px;
     padding-top: 133px;
-
+    &--tmpl-2 {
+      padding: 100px 0 50px;
+    }
+    &__img {
+      max-width: 80px;
+    }
     &__wrapper {
       padding: 0 27px;
     }
