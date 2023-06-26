@@ -90,9 +90,9 @@
     &:last-child {
       margin-right: 0;
     }
-    // &:hover {
-    //   color: rgba(#be8d34, 0.6);
-    // }
+    &:hover {
+      color: rgba(#be8d34, 0.6);
+    }
 
     &--active {
       color: #be8d34;

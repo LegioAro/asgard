@@ -56,6 +56,11 @@
     max-width: 890px;
     height: 490px;
   }
+
+  &__img {
+    width: 100%;
+    max-width: 814px;
+  }
 }
 
 @media (max-width: 1500px) {
@@ -92,6 +97,11 @@
       margin: 0 auto 50px;
     }
 
+    &__img {
+      margin: 0 auto 30px;
+      max-width: 600px;
+    }
+
     &__items {
       display: flex;
       align-items: center;
@@ -115,6 +125,7 @@
     &__items {
       flex-direction: column;
       max-width: 400px;
+      align-items: flex-start;
       margin: 0 40px 0 auto;
     }
     &__item {
